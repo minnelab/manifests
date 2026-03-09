@@ -1,20 +1,20 @@
-# argo-apps/auth-app.yaml
+# argo-apps/customization-app.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ml-auth-networking
+  name: ml-customization
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   project: default
   source:
     repoURL: 'https://github.com/minnelab/manifests.git'
     targetRevision: HEAD
-    path: 'layers/02-auth-networking'
+    path: 'maia-kubeflow'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: auth
+    namespace: kubeflow
   syncPolicy:
     automated:
       prune: true
