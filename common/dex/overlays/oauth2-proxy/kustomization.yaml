@@ -9,5 +9,6 @@ resources:
 configMapGenerator:
 - name: dex
   namespace: auth
+  behavior: replace
   files:
   - dev/dex.yaml
