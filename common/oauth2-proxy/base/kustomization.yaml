@@ -23,7 +23,7 @@ secretGenerator:
 configMapGenerator:
 - name: oauth2-proxy
   files:
-  - oauth2_proxy.cfg
+  - dev/oauth2_proxy.cfg
 
 - name: oauth2-proxy-theme
   files:
