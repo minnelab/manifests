@@ -16,15 +16,15 @@ configMapGenerator:
   env: issuer.env
 
 # 2. Use a replacement to copy the value from the ConfigMap into the RequestAuthentication
-#replacements:
-#- source:
-#    kind: ConfigMap
-#    name: dex-config
-#    fieldPath: data.DEX_URL
-#  targets:
-#  - select:
-#      kind: RequestAuthentication
-#      name: dex-jwt
-#      namespace: istio-system
-#    fieldPaths:
-#    - spec.jwtRules.0.issuer
+replacements:
+- source:
+    kind: ConfigMap
+    name: dex-config
+    fieldPath: data.DEX_URL
+  targets:
+  - select:
+      kind: RequestAuthentication
+      name: dex-jwt
+      namespace: istio-system
+    fieldPaths:
+    - spec.jwtRules.0.issuer
