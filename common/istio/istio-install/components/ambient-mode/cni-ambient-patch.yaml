@@ -19,3 +19,4 @@ spec:
         hostPath:
           path: /var/run/ztunnel
           type: DirectoryOrCreate
+      readinessProbe: null
