@@ -10,11 +10,21 @@ resources:
 # use the following AuthorizationPolicies instead of the default ones.
 #- authorizationpolicy.istio-ingressgateway-oauth2-proxy.cloudflare.yaml
 #- authorizationpolicy.istio-ingressgateway-require-jwt.cloudflare.yaml
-patches:
-- patch: |-
-    kind: RequestAuthentication
-    name: dex-jwt
-    namespace: istio-system
-    spec:
-      jwtRules:
-      - issuer: https://kubeflow.maia-cloud.ai/dex
+# 1. Generate a ConfigMap from your .env file
+configMapGenerator:
+- name: dex-config
+  env: issuer.env
+
+# 2. Use a replacement to copy the value from the ConfigMap into the RequestAuthentication
+replacements:
+- source:
+    kind: ConfigMap
+    name: dex-config
+    fieldPath: data.DEX_URL
+  targets:
+  - select:
+      kind: RequestAuthentication
+      name: dex-jwt
+      namespace: istio-system
+    fieldPaths:
+    - spec.jwtRules.0.issuer
