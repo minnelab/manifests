@@ -42,7 +42,7 @@ resources:
 # - ../experimental/ray/kuberay-operator/overlays/kubeflow
 components:
   # Apply Pod Security Standards dynamically
-  - ../../../common/security/PSS/dynamic/baseline
+  - ../../common/security/PSS/dynamic/baseline
 
 
 
