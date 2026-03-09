@@ -11,4 +11,4 @@ configMapGenerator:
   namespace: auth
   behavior: replace
   files:
-  - dev/dex.yaml
+  - dev/config.yaml
