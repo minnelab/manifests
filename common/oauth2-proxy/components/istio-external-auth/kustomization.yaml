@@ -4,27 +4,9 @@ kind: Component
 resources:
 - authorizationpolicy.istio-ingressgateway-oauth2-proxy.yaml
 - authorizationpolicy.istio-ingressgateway-require-jwt.yaml
-- requestauthentication.dex-jwt.yaml
+#- requestauthentication.dex-jwt.yaml
 
 # If want to enable caching for some paths (e.g. when using Cloudflare),
 # use the following AuthorizationPolicies instead of the default ones.
 #- authorizationpolicy.istio-ingressgateway-oauth2-proxy.cloudflare.yaml
 #- authorizationpolicy.istio-ingressgateway-require-jwt.cloudflare.yaml
-# 1. Generate a ConfigMap from your .env file
-configMapGenerator:
-- name: dex-config
-  env: issuer.env
-
-# 2. Use a replacement to copy the value from the ConfigMap into the RequestAuthentication
-replacements:
-- source:
-    kind: ConfigMap
-    name: dex-config
-    fieldPath: data.DEX_URL
-  targets:
-  - select:
-      kind: RequestAuthentication
-      name: dex-jwt
-      namespace: istio-system
-    fieldPaths:
-    - spec.jwtRules.0.issuer
