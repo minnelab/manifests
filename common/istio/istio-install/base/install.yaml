@@ -3846,10 +3846,6 @@ spec:
         - containerPort: 15014
           name: metrics
           protocol: TCP
-        readinessProbe:
-          httpGet:
-            path: /readyz
-            port: 8000
         resources:
           requests:
             cpu: 100m
