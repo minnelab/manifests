@@ -10,3 +10,11 @@ resources:
 # use the following AuthorizationPolicies instead of the default ones.
 #- authorizationpolicy.istio-ingressgateway-oauth2-proxy.cloudflare.yaml
 #- authorizationpolicy.istio-ingressgateway-require-jwt.cloudflare.yaml
+patches:
+- patch: |-
+    kind: RequestAuthentication
+    name: dex-jwt
+    namespace: istio-system
+    spec:
+      jwtRules:
+      - issuer: https://kubeflow.maia-cloud.ai/dex
