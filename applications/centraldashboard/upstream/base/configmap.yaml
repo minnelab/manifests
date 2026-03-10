@@ -14,6 +14,30 @@ data:
                 "type": "item"
             },
             {
+            "type": "item",
+            "link": "/orthanc-{ns}/",
+            "text": "Orthanc",
+            "icon": "device:dvr"
+            },
+                        {
+            "type": "item",
+            "link": "/orthanc-{ns}/ohif/",
+            "text": "OHIF",
+            "icon": "visibility"
+            },
+                    {
+            "type": "item",
+            "link": "/{ns}/mlflow/",
+            "text": "MLFlow",
+            "icon": "av:equalizer"
+            },
+                        {
+            "type": "item",
+            "link": "/minio-console/",
+            "text": "MinIO",
+            "icon": "cloud"
+            },
+            {
                 "icon": "assessment",
                 "link": "/tensorboards/",
                 "text": "TensorBoards",
