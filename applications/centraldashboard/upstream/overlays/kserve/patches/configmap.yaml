@@ -33,7 +33,7 @@ data:
             },
                         {
             "type": "item",
-            "link": "/{ns}/minio-console/",
+            "link": "/minio-console-{ns}/",
             "text": "MinIO",
             "icon": "cloud"
             },
