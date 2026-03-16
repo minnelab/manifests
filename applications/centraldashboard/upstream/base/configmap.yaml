@@ -31,11 +31,17 @@ data:
             "text": "MLFlow",
             "icon": "av:equalizer"
             },
-                        {
+            {
             "type": "item",
             "link": "/minio-console-{ns}/",
             "text": "MinIO",
             "icon": "cloud"
+            },
+            {
+            "type": "item",
+            "link": "/filebrowser-{ns}/",
+            "text": "FileBrowser",
+            "icon": "folder"
             },
             {
                 "icon": "assessment",
