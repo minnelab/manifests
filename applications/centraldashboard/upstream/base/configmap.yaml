@@ -44,6 +44,12 @@ data:
             "icon": "folder"
             },
             {
+            "type": "item",
+            "link": "/nvflare-{ns}/",
+            "text": "NVFlare Dashboard",
+            "icon": "kubeflow:nvflare"
+            },
+            {
                 "icon": "assessment",
                 "link": "/tensorboards/",
                 "text": "TensorBoards",
