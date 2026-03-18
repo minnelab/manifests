@@ -44,12 +44,6 @@ data:
             "icon": "folder"
             },
             {
-            "type": "item",
-            "link": "/nvflare-{ns}/",
-            "text": "NVFlare Dashboard",
-            "icon": "assessment"
-            },
-            {
                 "icon": "assessment",
                 "link": "/tensorboards/",
                 "text": "TensorBoards",
