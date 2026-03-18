@@ -47,7 +47,7 @@ data:
             "type": "item",
             "link": "/nvflare-{ns}/",
             "text": "NVFlare Dashboard",
-            "icon": "kubeflow:nvflare"
+            "icon": "assessment"
             },
             {
                 "icon": "assessment",
