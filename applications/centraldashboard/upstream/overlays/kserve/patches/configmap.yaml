@@ -27,7 +27,7 @@ data:
             },
                     {
             "type": "item",
-            "link": "/{ns}/mlflow/",
+            "link": "/{ns}-mlflow/",
             "text": "MLFlow",
             "icon": "av:equalizer"
             },
