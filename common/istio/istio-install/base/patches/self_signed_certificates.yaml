@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-      - name: istio-proxy
+      - name: discovery
         env:
         - name: SSL_CERT_FILE
           value: /etc/custom-ca/ca.pem

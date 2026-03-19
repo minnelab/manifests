@@ -17,7 +17,7 @@ patches:
 - path: patches/disable-debugging.yaml
 - path: patches/seccomp-istio-ingressgateway.yaml
 - path: patches/seccomp-istiod.yaml
-#- path: patches/self_signed_certificates.yaml
+- path: patches/self_signed_certificates.yaml
 
 images:
 - name: busybox
