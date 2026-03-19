@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: istiod
+  namespace: istio-system
+spec:
+  template:
+    spec:
+      containers:
+      - name: istio-proxy
+        env:
+        - name: SSL_CERT_FILE
+          value: /etc/custom-ca/ca.pem
+        volumeMounts:
+        - mountPath: /etc/custom-ca
+          name: custom-ca-volume
+          readOnly: true
+      volumes:
+      - name: custom-ca-volume
+        configMap:
+          defaultMode: 420
+          name: internal-ca
