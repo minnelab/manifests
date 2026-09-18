@@ -6,6 +6,7 @@ keycloakClientId: maia
 keycloakClientSecret: pUBnBOY80SnXgjibTYM9ZWNzY2xreNGQok
 cookieSecret: 7d16fee92f8d11b8940b081b3f8b8acb
 sslInsecureSkipVerify: false
+dex: {}
 ingress:
   enabled: true
   className: maia-core-traefik
