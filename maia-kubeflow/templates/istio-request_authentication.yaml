@@ -17,6 +17,7 @@ spec:
 
   jwtRules:
   - issuer: https://{{ .Values.domain }}/dex
+    jwksUri: http://dex.auth.svc.cluster.local:5556/dex/keys
     # `forwardOriginalToken` is not strictly required to be true.
     # there are pros and cons to each value:
     #  - true: the original token is forwarded to the destination service
