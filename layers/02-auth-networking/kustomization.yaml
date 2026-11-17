@@ -19,3 +19,7 @@ resources:
   - ../../common/kubeflow-roles/base
   - ../../common/istio/kubeflow-istio-resources/base
 
+images:
+- name: quay.io/oauth2-proxy/oauth2-proxy
+  newName: maiacloudai/oauth2-proxy
+  newTag: v7.14.3
