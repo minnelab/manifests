@@ -53,3 +53,7 @@ images:
 - name: quay.io/jetstack/cert-manager-webhook
   newName: maiacloudai/cert-manager-webhook
   newTag: v1.19.4
+
+- name: gcr.io/istio-release/install-cni
+  newName: istio/install-cni
+  newTag: "1.28.0"
