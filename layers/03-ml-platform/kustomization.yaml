@@ -53,3 +53,7 @@ images:
 - name: quay.io/brancz/kube-rbac-proxy
   newName: maiacloudai/kube-rbac-proxy
   newTag: v0.13.1
+
+- name: quay.io/argoproj/workflow-controller
+  newName: maiacloudai/workflow-controller
+  newTag: v3.7.3
