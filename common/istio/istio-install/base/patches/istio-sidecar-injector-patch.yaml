@@ -27,7 +27,7 @@ data:
           }
         },
         "externalIstiod": false,
-        "hub": "istio",
+        "hub": "gcr.io/istio-release",
         "imagePullPolicy": "",
         "imagePullSecrets": [],
         "istioNamespace": "istio-system",
