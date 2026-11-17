@@ -40,3 +40,16 @@ resources:
 - ../../common/istio/istio-crds/base
 - ../../common/istio/istio-namespace/base
 - ../../common/istio/istio-install/overlays/oauth2-proxy
+
+images:
+- name: quay.io/jetstack/cert-manager-controller
+  newName: maiacloudai/cert-manager-controller
+  newTag: v1.19.4
+
+- name: quay.io/jetstack/cert-manager-cainjector
+  newName: maiacloudai/cert-manager-cainjector
+  newTag: v1.19.4
+
+- name: quay.io/jetstack/cert-manager-webhook
+  newName: maiacloudai/cert-manager-webhook
+  newTag: v1.19.4
